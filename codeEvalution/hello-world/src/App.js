@@ -9,14 +9,30 @@ import Counter from './componets/Counter';
 import FunctionClick from './componets/FunctionClick';
 import ClassClick from './componets/ClassClick';
 import EventBind from './componets/EventBind';
+import ParentComponent from './componets/ParentComponent';
+import UserGreeting from './componets/UserGreeting';
+import NameList from './componets/NameList';
+import Stylesheet from './componets/Stylesheet';
+import Inline from './componets/Inline';
+import './appStyles.css'
+import styles from './appStyles.module.css'
+import Form from './componets/Form';
 
 class App extends Component {
   render() {
     return (
     <div className="App">
+      <Form />
+      {/* <h1 className='error'>Error</h1>
+      <h1 className={styles.sucess}>sucess</h1>
+      <Inline className={'error'} /> */}
+      {/* <Stylesheet  primary={ true } /> */}
+      {/* <NameList /> */}
+      {/* <UserGreeting /> */}
+      {/* <ParentComponent /> */}
       {/* <FunctionClick />
       <ClassClick /> */}
-      <EventBind />
+      {/* <EventBind /> */}
       {/* <Counter /> */}
       {/* <Greet /> */}
       {/* <Message /> */}
