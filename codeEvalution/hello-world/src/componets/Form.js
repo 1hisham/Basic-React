@@ -20,10 +20,14 @@ export class Form extends Component {
             comments: event.target.value
         })
     }
+    handleSubmit = event => {
+        alert (`${this.state.username} ${this.state.comments} ${this.state.topic}`)
+        event.preventDefault()
+    }
     
   render() {
     return (
-     <form>
+     <form onSubmit={this.handleSubmit}>
         <div>
             <label>Username</label>
             <input type='text' value={this.state.username} onChange={this.handleUsernameChange} />
