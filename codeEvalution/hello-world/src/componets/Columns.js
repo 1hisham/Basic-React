@@ -7,6 +7,7 @@ function Columns() {
     <td>John</td>
     </React.Fragment>
   )
+  
 }
 
 export default Columns

@@ -22,12 +22,42 @@ import FragmentDemo from './componets/FragmentDemo';
 import Tables from './componets/Tables';
 import PureComp from './componets/PureComp';
 import ParentComp from './componets/ParentComp';
+import RefsDemo from './componets/RefsDemo';
+import FocusInput from './componets/FocusInput';
+import FEParentInput from './componets/FEParentInput';
+import PortalDemo from './componets/PortalDemo';
+import Hero from './componets/Hero';
+import ErrorBoundary from './componets/ErrorBoundary';
+import ClickCounter from './componets/ClickCounter';
+import HoverCounter from './componets/HoverCounter';
+import ClickcounterTwo from './componets/ClickcounterTwo';
+import HowerCounterTwo from './componets/HowerCounterTwo';
+import User from './componets/User';
 
 class App extends Component {
   render() {
     return (
+      
     <div className="App">
-      <ParentComp />
+      <User name={ () => "jack" }/>
+      <HowerCounterTwo />
+      <ClickcounterTwo />
+      {/* <HoverCounter /> */}
+      {/* <ClickCounter />  */}
+      {/* <ErrorBoundary>
+      <Hero heroName="Batman"></Hero>
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Hero heroName="Superman"></Hero>
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Hero heroName="Jocker"></Hero>
+      </ErrorBoundary> */}
+      {/* <PortalDemo /> */}
+      {/* <FEParentInput /> */}
+      {/* <FocusInput /> */}
+      {/* <RefsDemo /> */}
+      {/* <ParentComp /> */}
       {/* <PureComp /> */}
       {/* <Tables /> */}
       {/* <FragmentDemo /> */}
