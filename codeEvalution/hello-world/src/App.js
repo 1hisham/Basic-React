@@ -33,15 +33,20 @@ import HoverCounter from './componets/HoverCounter';
 import ClickcounterTwo from './componets/ClickcounterTwo';
 import HowerCounterTwo from './componets/HowerCounterTwo';
 import User from './componets/User';
+import { UserProvider } from './componets/userContext';
+import ComponentC from './componets/ComponentC';
 
 class App extends Component {
   render() {
     return (
       
     <div className="App">
-      <User name={ () => "jack" }/>
+      <UserProvider>
+        <ComponentC />
+        </UserProvider>
+      {/* <User render={ (isLoggerIn) => isLoggerIn ? 'Vishwas' : 'Guest' }/>
       <HowerCounterTwo />
-      <ClickcounterTwo />
+      <ClickcounterTwo /> */}
       {/* <HoverCounter /> */}
       {/* <ClickCounter />  */}
       {/* <ErrorBoundary>

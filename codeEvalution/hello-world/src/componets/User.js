@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 class User extends Component {
   render() {
     return (
-      <div>John</div>
+      <div>
+        {this.props.render(true)}
+      </div>
     )
   }
 }
