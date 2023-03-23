@@ -35,6 +35,15 @@ body {
 header - mobile 
 ===========
 =========== */
+.all-prices{
+  display: flex;
+  
+}
+
+
+
+
+
 .total-header {
   padding-left: 9px;
   padding-right: 12px;
