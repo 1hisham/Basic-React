@@ -35,11 +35,6 @@ body {
 header - mobile 
 ===========
 =========== */
-.all-prices{
-  display: flex;
-  
-}
-
 
 
 
@@ -702,6 +697,9 @@ header - mobile
   }
   .deals-of-day .image-cards li {
     width: 33%;
+  }
+  .total-about .main-drop-down{
+    justify-content: center;
   }
 }
 
