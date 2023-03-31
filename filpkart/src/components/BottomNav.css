@@ -1,0 +1,21 @@
+.total-bottom{
+    height: 38px;
+}
+input{
+    padding-block: 8.5px;
+    width: 80%;
+    border: none;
+}
+a{
+    display: flex;
+    justify-content: center;
+    
+}
+button{
+    border: none;
+    background-color: white;
+}
+button img{
+    width: 14px;
+    
+}

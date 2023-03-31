@@ -1,44 +1,18 @@
-import React, { useEffect, useState } from "react";
+import { getValue } from "@testing-library/user-event/dist/utils";
+import React, { useEffect, useState, useRef } from "react";
 import "./../styles.css";
 import HeartSvg from "./HeartSvg";
-
-
-
-
-const svgHalfRating = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="3 3 18 18"
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path
-      className="foreground"
-      d="M12 4c-.224 0-.42.15-.48.366l-1.67 5.642H4.5c-.218.002-.41.145-.472.354-.064.208.014.433.193.557l4.307 3.07-1.5 5.33c-.08.202-.02.433.15.57.17.14.41.15.59.03L12 16.98V4z"
-    ></path>
-  </svg>
-);
-let svgFullRating = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="3 3 18 18"
-    aria-hidden="true"
-    focusable="false"
-    width="18"
-    height="18"
-  >
-    <path
-      d="M19.985,10.36a0.5,0.5,0,0,0-.477-0.352H14.157L12.488,4.366a0.5,0.5,0,0,0-.962,0l-1.67,5.642H4.5a0.5,0.5,0,0,0-.279.911L8.53,13.991l-1.5,5.328a0.5,0.5,0,0,0,.741.6l4.231-2.935,4.215,2.935a0.5,0.5,0,0,0,.743-0.6l-1.484-5.328,4.306-3.074A0.5,0.5,0,0,0,19.985,10.36Z"
-      fill="#222222"
-    ></path>
-  </svg>
-);
+import { svgFullRating,svgHalfRating } from "./svg";
+const filterValue = document.querySelector(".toget-input");
 
 
 
 function PopularGiftNow() {
-  const [data, update] = useState([]);
-  
+  let [data, setUpdate] = useState([]);
+
+
+
+const inputValue = useRef()
 
   const fetchData = () => {
     fetch(
@@ -48,10 +22,36 @@ function PopularGiftNow() {
       .then((data) => {
         calculationDiscount(data);
 
-        update(data);
-        console.log(data);
+        setUpdate(data);
+        // console.log(data);
       });
   };
+
+  function FilterClick() {
+    console.log(data)
+
+    console.log(inputValue.current.value)
+    let filterdata = data.filter((item) => {
+      // console.log(filitterValue.value);
+      
+      console.log(item.amount.payPrice,"price")
+      return item.amount.payPrice > inputValue.current.value
+    });
+    
+    console.log(filterdata);
+   
+    setUpdate(filterdata)
+   
+  }
+
+ 
+  
+  
+  
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   function StarRatingAmount(props) {
     let svg = [];
@@ -64,12 +64,6 @@ function PopularGiftNow() {
     }
     return svg;
   }
-
-
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   function calculationDiscount(products) {
     let discountPrice = 0;
@@ -90,19 +84,12 @@ function PopularGiftNow() {
         <h2>Popular gifts right now</h2>
       </div>
       <div className="popular-gift-cards">
-        <div className="input-area">
-          <input className="toget-input" type="number" size="10" />
-
-          <button className="input-button">click</button>
-          <button className="clear-button">clear</button>
-        </div>
         <div className="single-card">
           {data.map((item, indx) => (
-            <div className="full-card" >
+            <div  className={"full-card"}>
               <div className="image-container">
                 <img src={item.imgURL} />
-            <HeartSvg />
-             
+                <HeartSvg />
               </div>
               <li className="bottom-container total-pricelist">
                 <h2>{item.caption}</h2>
@@ -116,7 +103,7 @@ function PopularGiftNow() {
                   <span>₹ {item.amount.payPrice} </span>
                   <span>₹ {item.amount.originalPrice}</span>
                   <span>({item.amount.discount}% off)</span>
-                  {item.freeDelivery == "" ? (
+                  {item.freeDelivery === "" ? (
                     <span className="no-delivery">no-delivery</span>
                   ) : (
                     <span className="FREE delivery">FREE delivery</span>
@@ -126,6 +113,20 @@ function PopularGiftNow() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="input-area">
+        <input
+          className="toget-input"
+          type="number"
+          size="10"
+          onChange={fetchData}
+          ref={inputValue}
+        />
+        <button className="input-button " onClick={FilterClick} >
+          click
+        </button>
+        <button className="clear-button" >clear</button>
+
       </div>
     </section>
   );

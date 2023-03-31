@@ -1,3 +1,4 @@
+import BottomNav from "./BottomNav";
 import NavRight from "./NavRight";
 import Topleft from "./TopLeft";
 import './TotalHeader.css'
@@ -10,6 +11,7 @@ function TotalHeader(){
          <Topleft />
          <NavRight />
         </div>
+        <BottomNav />
         </div>
     )
 }

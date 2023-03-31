@@ -3,14 +3,48 @@ import React, { useEffect, useState } from "react";
 const dropDown = document.querySelectorAll(".main-drop-down");
 
 function Footer() {
-  let [active, setdata] = useState("active");
+  let [first, firstData] = useState("active");
+  let [second, secondData] = useState("active");
+  let [third, thirdData] = useState("active");
+  let [four, fouthData] = useState("active");
 
-  let clickHandler = () => {
+
+
+  let clickHandlerOne = () => {
     console.log("hello");
-    if (active == "") {
-      setdata("active");
+    if (first == "") {
+      firstData("active");
     } else {
-      setdata("");
+      firstData("");
+    }
+    console.log(dropDown.id);
+  };
+
+  let clickHandlerTwo = () => {
+    console.log("hello");
+    if (second == "") {
+      secondData("active");
+    } else {
+      secondData("");
+    }
+    console.log(dropDown.id);
+  };
+
+  let clickHandlerThree = () => {
+    console.log("hello");
+    if (third == "") {
+      thirdData("active");
+    } else {
+      thirdData("");
+    }
+    console.log(dropDown.id);
+  };
+  let clickHandlerFour = () => {
+    console.log("hello");
+    if (four == "") {
+      fouthData("active");
+    } else {
+      fouthData("");
     }
     console.log(dropDown.id);
   };
@@ -104,14 +138,14 @@ function Footer() {
               <div
                 className="main-drop-down"
                 id="first"
-                onClick={() => clickHandler}
+                onClick={clickHandlerOne}
               >
                 <span>Shop</span>
                 <div className="icon">
                   <i className="fa-sharp fa-solid fa-chevron-down"></i>
                 </div>
               </div>
-              <ul className={`total-section ${active}`}>
+              <ul className={`total-section ${first}`}>
                 <li>Gift cards</li>
                 <li>Sitemap</li>
                 <li>Esty blog</li>
@@ -124,14 +158,14 @@ function Footer() {
               <div
                 className="main-drop-down"
                 id="second"
-                onClick={clickHandler}
+                onClick={clickHandlerTwo}
               >
                 <span>Sell</span>
                 <div className="icon">
                   <i className="fa-sharp fa-solid fa-chevron-down"></i>
                 </div>
               </div>
-              <ul className={`total-section ${active}`}>
+              <ul className={`total-section ${second}`}>
                 <li>Sell on Esty</li>
                 <li>Teams</li>
                 <li>Forums</li>
@@ -139,13 +173,13 @@ function Footer() {
               </ul>
             </div>
             <div className="sub-items-three">
-              <div className="main-drop-down" id="third" onClick={clickHandler}>
+              <div className="main-drop-down" id="third" onClick={clickHandlerThree}>
                 <span>About</span>
                 <div className="icon">
                   <i className="fa-sharp fa-solid fa-chevron-down"></i>
                 </div>
               </div>
-              <ul className={`total-section ${active}`}>
+              <ul className={`total-section ${third}`}>
                 <li>Etsy,lnc.</li>
                 <li>Policies</li>
                 <li>Investors</li>
@@ -155,13 +189,13 @@ function Footer() {
               </ul>
             </div>
             <div className="sub-items-four">
-              <div className="main-drop-down" id="first" onClick={clickHandler}>
+              <div className="main-drop-down" id="first" onClick={clickHandlerFour}>
                 <span>Help</span>
                 <div className="icon">
                   <i className="fa-sharp fa-solid fa-chevron-down"></i>
                 </div>
               </div>
-              <ul className={`total-section ${active}`}>
+              <ul className={`total-section ${four}`}>
                 <li>Help cantre</li>
                 <li>Privancy settings</li>
                 <div className="social-media-tab">

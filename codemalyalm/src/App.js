@@ -9,6 +9,7 @@ import MainHeading from './Component/MainHeading';
 import DealOfDay from './Component/DealOfDay';
 import PopularGiftNow from './Component/PopularGiftNow';
 import MovingItems from './Component/MovingItems';
+import Filter from './Component/Filter';
 
 
 
@@ -22,6 +23,7 @@ function App() {
     <PopularGiftNow />
     <MovingItems />
    <Footer />
+ 
   
    </div>
   );

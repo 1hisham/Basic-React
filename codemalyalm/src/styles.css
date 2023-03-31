@@ -1014,6 +1014,9 @@ header - mobile
     flex-direction: row;
     gap: 12px;
   }
+  #show{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1076,4 +1079,5 @@ header - mobile
    .popular-gift-cards .full-card {
     width: 20%;
   }
+
 }
