@@ -9,7 +9,7 @@ let fetchdata = () => {fetch("/data.json")
 .then(data => {
     setdata(data)
 
-    console.log(data);
+    // console.log(data);
 })
 
 }
@@ -21,7 +21,7 @@ useEffect(() =>{
  return(
     <div className="total-container-nav">
         { itemdata.navItem?.map((item,index) => {
-            console.log(item);
+            // console.log(item);
            return <div className="images" key={index}><img src={item}/></div>
         })}
     </div>
