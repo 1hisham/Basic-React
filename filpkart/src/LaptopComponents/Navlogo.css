@@ -1,0 +1,12 @@
+.explore-plus{
+    font-style: italic;
+    display: flex;
+    /* font-family: font2; */
+    font-size: 11px;
+}
+.explore-plus .explore{
+    color: white;
+}
+.explore-plus .plus{
+    color: #FFE500;
+}

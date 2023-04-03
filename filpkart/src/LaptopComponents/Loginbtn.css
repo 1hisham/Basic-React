@@ -1,0 +1,23 @@
+.login-btn{
+    color: #2874F0;
+    background-color: white;
+    border: none;
+    padding: 5px 40px;
+    font-family: font2;
+}
+.tota-login-btn form{
+    color: black;
+    list-style: none;
+}
+.tota-login-btn li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+ul{
+    display: none;
+    position: absolute;
+
+}
+.login-btn:hover ul{
+    display: block;
+}

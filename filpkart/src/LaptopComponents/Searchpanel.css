@@ -1,0 +1,24 @@
+ 
+ .total-search-bar{
+
+     min-width: 304px;
+
+ }
+ .total-search-bar a{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 540px;
+    
+    
+} 
+.total-search-bar  input{
+    padding-block: 8.5px;
+    border: none;
+    width: 450px;
+
+}
+
+.total-search-bar button{
+    border: none;
+    background-color: white;
+}

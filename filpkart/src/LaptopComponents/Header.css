@@ -1,0 +1,12 @@
+.total-header-laptop{
+    background-color: #2874f0;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    justify-content: center;
+
+}
+
+.total-header-laptop > * {
+    margin:  0 20px;
+}

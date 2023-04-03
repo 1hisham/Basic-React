@@ -1,21 +1,21 @@
 .total-bottom{
     height: 38px;
 }
-input{
+.total-bottom input{
     padding-block: 8.5px;
     width: 80%;
     border: none;
 }
-a{
+.total-bottom a{
     display: flex;
     justify-content: center;
     
 }
-button{
+.total-bottom button{
     border: none;
     background-color: white;
 }
-button img{
+.total-bottom button img{
     width: 14px;
     
 }

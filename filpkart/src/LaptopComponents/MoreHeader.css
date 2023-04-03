@@ -1,0 +1,10 @@
+.total-more-header {
+    display: flex;
+    gap: 3px;
+    color: white;
+
+}
+.total-more-header img{
+   
+    transform: rotate(270deg);
+}

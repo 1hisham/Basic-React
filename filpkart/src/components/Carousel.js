@@ -3,17 +3,41 @@ import "./Carousel.css";
 
 function Carousel() {
   const [carouseldata, setData] = useState([]);
+  // let [count, setCount] = useState(0)
   
 
   let fetchdata = () => {
     fetch("/data.json")
       .then((respose) => respose.json())
       .then((data) => {
-        setData(data);
+        setData(data.movingitem);
       });
   };
-  console.log(carouseldata);
+  console.log(carouseldata.length);
+  
 
+
+  // let i=1; 
+  // function Itteration(i){
+  //     setTimeout(function(){
+  //        output(i)
+         
+  //        if(i==10){
+  //          i = 0
+  //        }
+  //       Itteration(i+1)
+  //     }, 2000)
+  // }
+  // Itteration(i);
+  
+  // function output(i){
+   
+  //   setCount(i)
+    
+  // } 
+  
+
+ 
 
   useEffect(() => {
     fetchdata();
@@ -28,7 +52,7 @@ function Carousel() {
         }
     `}</style>
         <div className="carousel">
-          {carouseldata.movingitem?.map((items, index) => {
+          {carouseldata?.map((items, index) => {
             console.log(items);
 
             return (
