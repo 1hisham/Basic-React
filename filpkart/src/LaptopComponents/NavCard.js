@@ -1,26 +1,31 @@
-import { useEffect } from "react";
 
-
+import './NavCard.css'
+import arrow from './../LaptopSvg/arrowNav.svg'
 function NavCard(props){
-   let data =()=> {
-    props
-   }
-    useEffect(() => {
-       useEffect
-    })
-    
-    
+    console.log(props);
+    const {
+        items
+    } = props
+ 
+
+          console.log(items);
+          
     return(
-        <div className="total">
-        <div className="jsut">
-            {props.laptopNav?.Map((item) =>{
-                console.log(item,"this is item");
-              return <div>{item}</div>
-              
-                
-            })}
-        </div>
+        <div className="total-nav-cards">
+        {items?.map((item)=> {
+            return <div className="cards">
+            <div className="item-image"><img src={item.imglink}/></div>
+            <div className="item-des">{item.itemdetails}
+            {item.list !== "" ? <img src={arrow}/>: <div></div>}
+            </div>
+            
+             </div>
+        })}          
+       
         </div>
     )
+    
+
 }
+
 export default NavCard

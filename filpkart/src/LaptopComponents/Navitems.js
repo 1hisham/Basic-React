@@ -9,7 +9,7 @@ function Navitems(){
     let fetchdata =()=> fetch('./lapdata.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data,"ahdsfuosdyhoashglasdhgljksaghljshgiopwhgik");
+        console.log(data);
          setData(data.laptopNav)
         
     })
@@ -21,10 +21,7 @@ function Navitems(){
     
     return(
         <div className='total-nav-container'>
-            
-    
-            <NavCard props={itemdata}/>
-
+        <NavCard items={itemdata}/>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import "./Carousel.css";
 
 function Carousel() {
   const [carouseldata, setData] = useState([]);
-  // let [count, setCount] = useState(0)
+  let [count, setCount] = useState(0)
   
 
   let fetchdata = () => {
@@ -16,6 +16,13 @@ function Carousel() {
   console.log(carouseldata.length);
   
 
+  // setInterval(() => {
+  //   if(count == 5){
+  //     count = 0
+  //   }
+  //   setCount(++count)
+  // }, 1000);
+  // console.log(count);
 
   // let i=1; 
   // function Itteration(i){
@@ -47,8 +54,8 @@ function Carousel() {
       <div className="total-carousel">
         <style>{`
         @keyframes slidein {
-             0% { transform: translateX(0%); }
-             100% { transform: translateX(-100%); }
+             0% { transform: translateX(-${count - 1}00%); }
+             100% { transform: translateX(-${count}00%); }
         }
     `}</style>
         <div className="carousel">

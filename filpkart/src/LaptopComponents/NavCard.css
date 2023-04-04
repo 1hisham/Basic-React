@@ -1,1 +1,20 @@
 
+.total-nav-cards {
+    display: flex;
+   margin: auto;
+    width: 1280px;
+    justify-content: space-between;
+
+}
+.total-nav-cards .item-image  img{
+    width: 64px;
+    height: 64px;
+}
+.total-nav-cards .item-des {
+    font-family: font2;
+    font-size: 14px;
+}
+.total-nav-cards .item-des img{
+    transform: rotate(270deg);
+    margin-left: 5px;
+}
