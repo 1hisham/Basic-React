@@ -14,15 +14,16 @@ function Carousel() {
       });
   };
   console.log(carouseldata.length);
-  
 
-  // setInterval(() => {
-  //   if(count == 5){
-  //     count = 0
-  //   }
-  //   setCount(++count)
-  // }, 1000);
-  // console.log(count);
+
+  setInterval(() => {
+    if(count == 5){
+      count = 0
+      clearInterval(count)
+    }
+    setCount(++count)
+  }, 2000);
+  console.log(count);
 
   // let i=1; 
   // function Itteration(i){
