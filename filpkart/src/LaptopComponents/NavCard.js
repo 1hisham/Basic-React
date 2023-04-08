@@ -2,13 +2,13 @@
 import './NavCard.css'
 import arrow from './../LaptopSvg/arrowNav.svg'
 function NavCard(props){
-    console.log(props);
+    // console.log(props);
     const {
         items
     } = props
  
 
-          console.log(items);
+        //   console.log(items);
           
     return(
         <div className="total-nav-cards">

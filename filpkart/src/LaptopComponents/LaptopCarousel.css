@@ -1,0 +1,33 @@
+.carousel-container-lap{
+    max-width: 1440px;
+    overflow: hidden;
+    /* width: 100vw; */
+    position: relative;
+    margin: auto;
+}
+.single-container{
+    display: flex;
+}
+/* .carousel-container-lap {
+} */
+.carousel-container-lap img{
+    display: flex;
+    /* width: 100vw; */
+}
+.carousel-container-lap .left-arrow-lap{
+    position: absolute;
+    top: 35%;
+}
+.carousel-container-lap .right-arrow-lap{
+    position: absolute;
+    top: 35%;
+    right: 0;
+    transform: rotate(180deg);
+}
+.carousel-container-lap  button{
+    width: 40px;
+    height: 100px;
+    background-color: white;
+    border: none;
+
+}

@@ -13,17 +13,17 @@ function Carousel() {
         setData(data.movingitem);
       });
   };
-  console.log(carouseldata.length);
+  // console.log(carouseldata.length);
 
 
-  setInterval(() => {
-    if(count == 5){
-      count = 0
-      clearInterval(count)
-    }
-    setCount(++count)
-  }, 2000);
-  console.log(count);
+  // setInterval(() => {
+  //   if(count == 5){
+  //     count = 0
+  //     clearInterval(count)
+  //   }
+  //   setCount(++count)
+  // }, 2000);
+  // console.log(count);
 
   // let i=1; 
   // function Itteration(i){
@@ -61,7 +61,7 @@ function Carousel() {
     `}</style>
         <div className="carousel">
           {carouseldata?.map((items, index) => {
-            console.log(items);
+            // console.log(items);
 
             return (
               <div className="carousel-image" key={index}>

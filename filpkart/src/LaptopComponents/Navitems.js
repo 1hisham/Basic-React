@@ -9,7 +9,7 @@ function Navitems(){
     let fetchdata =()=> fetch('./lapdata.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        // console.log(data);
          setData(data.laptopNav)
         
     })

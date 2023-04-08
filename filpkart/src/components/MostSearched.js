@@ -8,7 +8,7 @@ function MostSearch(){
         fetch('/data.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data.mostsearch);
+            // console.log(data.mostsearch);
             setItemdata(data.mostsearch)
             
         })

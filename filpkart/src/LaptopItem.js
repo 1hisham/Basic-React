@@ -1,4 +1,5 @@
 import Header from "./LaptopComponents/Header"
+import LaptopCarousel from "./LaptopComponents/LaptopCarousel"
 import Navitems from "./LaptopComponents/Navitems"
 
 
@@ -9,6 +10,7 @@ function LaptopItem(){
         <div className="laptop">
             <Header />
             <Navitems />
+            <LaptopCarousel />
         </div>
     )
 }
