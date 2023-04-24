@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
+
 function Popular() {
   const [popular, setPopular] = useState([]);
   useEffect(() => {
@@ -36,13 +38,15 @@ function Popular() {
           gap:"5rem",
 
         }}>
-          {popular.map((recipe) => {
+          {popular?.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
+                  <Link to={"/recipe/" + recipe.id}>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
+                  </Link>
                 </Card>
               </SplideSlide>
             );
