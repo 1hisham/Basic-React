@@ -1,0 +1,13 @@
+img{
+  width: 250px;
+  height: 250px;
+}
+.App{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+p{
+  text-align: center;
+}
